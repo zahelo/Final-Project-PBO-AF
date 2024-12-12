@@ -63,19 +63,20 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] shibainu {
+        internal static byte[] bone {
             get {
-                object obj = ResourceManager.GetObject("shibainu", resourceCulture);
+                object obj = ResourceManager.GetObject("bone", resourceCulture);
                 return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static string String1 {
+        internal static byte[] shibainu {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                object obj = ResourceManager.GetObject("shibainu", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

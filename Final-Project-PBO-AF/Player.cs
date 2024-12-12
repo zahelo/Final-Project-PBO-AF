@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
-
-namespace Final_Project_PBO_AF
+﻿namespace Final_Project_PBO_AF
 {
     public class Player
     {
         private const int PlayerWidth = 64;
         private const int PlayerHeight = 48;
         private const int TotalFrames = 4;
-      
         private PictureBox _playerPictureBox;
         private Image _spriteSheet;
         private int _currentFrame;
