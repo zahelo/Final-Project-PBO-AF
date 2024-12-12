@@ -11,7 +11,7 @@ namespace Final_Project_PBO_AF
 {
     public class Player
     {
-        private const int PlayerWidth = 32;
+        private const int PlayerWidth = 64;
         private const int PlayerHeight = 48;
         private const int TotalFrames = 4;
       
@@ -48,25 +48,30 @@ namespace Final_Project_PBO_AF
             int speed = 10;
             _isMoving = true;
 
+            // _currentRow menunjukkan baris yang sesuai pada resource sprite (bisa dilihat pada folder Resource -> shibainu.png)
             switch (key)
             {
-                case Keys.Down:
-                    _currentRow = 0; // Baris untuk Down
+                case Keys.Down: // Baris untuk Down dengan menggunakan panah atau 'S'
+                case Keys.S:
+                    _currentRow = 0;
                     if (_playerPictureBox.Bottom < boundary.Height)
                         _playerPictureBox.Top += speed;
                     break;
                 case Keys.Left:
+                case Keys.A:
                     _currentRow = 1; // Baris untuk Left
                     if (_playerPictureBox.Left > 0)
                         _playerPictureBox.Left -= speed;
                     break;
                 case Keys.Right:
-                    _currentRow = 1; // Baris untuk Right
+                case Keys.D:
+                    _currentRow = 2; // Baris untuk Right
                     if (_playerPictureBox.Right < boundary.Width)
                         _playerPictureBox.Left += speed;
                     break;
                 case Keys.Up:
-                    _currentRow = 2; // Baris untuk Up
+                case Keys.W:
+                    _currentRow = 3; // Baris untuk Up
                     if (_playerPictureBox.Top > 0)
                         _playerPictureBox.Top -= speed;
                     break;
@@ -95,17 +100,17 @@ namespace Final_Project_PBO_AF
 
         private void UpdateSprite()
         {
-            int frameWidth = _spriteSheet.Width / TotalFrames;
-            int frameHeight = _spriteSheet.Height / 4;
+            int frameWidth = 64;
+            int frameHeight = 48;
 
             Rectangle srcRect = new Rectangle(_currentFrame * frameWidth, _currentRow * frameHeight, frameWidth, frameHeight);
             Bitmap currentFrameImage = new Bitmap(frameWidth, frameHeight);
 
             using (Graphics g = Graphics.FromImage(currentFrameImage))
             {
+                g.Clear(Color.Transparent);
                 g.DrawImage(_spriteSheet, new Rectangle(0, 0, frameWidth, frameHeight), srcRect, GraphicsUnit.Pixel);
             }
-
             _playerPictureBox.Image = currentFrameImage;
         }
     }
