@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\gold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\gold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\bone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\bone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\uni stuff\\semester 5\\pbo\\final-project-pbo-af\\final-project-pbo-af\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 283,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,6 +55,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Gold.cs",
+              "DocumentMoniker": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Gold.cs",
+              "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Gold.cs",
+              "ToolTip": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Gold.cs",
+              "RelativeToolTip": "Final-Project-PBO-AF\\Gold.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T14:20:20.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Poop.cs",
               "DocumentMoniker": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Poop.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Poop.cs",
@@ -58,8 +74,7 @@
               "RelativeToolTip": "Final-Project-PBO-AF\\Poop.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T03:58:40.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-14T03:58:40.877Z"
             },
             {
               "$type": "Document",
@@ -69,10 +84,9 @@
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Bone.cs",
               "ToolTip": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Bone.cs",
               "RelativeToolTip": "Final-Project-PBO-AF\\Bone.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswCUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T04:50:11.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T04:50:11.04Z"
             },
             {
               "$type": "Document",
@@ -82,10 +96,9 @@
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Player.cs",
               "ToolTip": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Player.cs",
               "RelativeToolTip": "Final-Project-PBO-AF\\Player.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAkwCAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:03:02.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T03:03:02.511Z"
             },
             {
               "$type": "Document",
@@ -95,14 +108,14 @@
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\MainForm.cs",
               "ToolTip": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MainForm.cs",
               "RelativeToolTip": "Final-Project-PBO-AF\\MainForm.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAQwJYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:58:55.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\MainForm.Designer.cs",
@@ -110,12 +123,11 @@
               "RelativeToolTip": "Final-Project-PBO-AF\\MainForm.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T08:41:28.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T08:41:28.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Program.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Program.cs",
@@ -123,12 +135,11 @@
               "RelativeToolTip": "Final-Project-PBO-AF\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:01:08.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T03:01:08.527Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Final-Project-PBO-AF.csproj",
               "DocumentMoniker": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",

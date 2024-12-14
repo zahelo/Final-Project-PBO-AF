@@ -1,6 +1,6 @@
 using System.Drawing;
-using System.Security.Policy;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Final_Project_PBO_AF
 {
@@ -9,16 +9,22 @@ namespace Final_Project_PBO_AF
         private const int PlayerInitialPositionX = 900;
         private const int PlayerInitialPositionY = 450;
         private const int AnimationInterval = 100;
+        private const int GameDuration = 60;
+
         private System.Windows.Forms.Timer _animationTimer;
+        private System.Windows.Forms.Timer _gameTimer;
 
         private Player _player;
         private Label _frameLabel;
+        private Label _scoreLabel;
+        private Label _timerLabel;
+
         private long _totalFrameCount;
         private List<Bone> _bones;
+        private List<Gold> _gold;
         private List<Poop> _poop;
         private int _score;
-        private Label _scoreLabel;
-
+        private int _remainingTime;
 
         public MainForm()
         {
@@ -39,8 +45,13 @@ namespace Final_Project_PBO_AF
             _animationTimer.Tick += (sender, e) => Render();
             _animationTimer.Start();
 
+            _gameTimer = new System.Windows.Forms.Timer { Interval = 1000 };
+            _gameTimer.Tick += UpdateGameTimer;
+            _remainingTime = GameDuration;
+
             _bones = new List<Bone>();
             _poop = new List<Poop>();
+            _gold = new List<Gold>();
             _score = 0;
 
             _player = new Player(new Point(PlayerInitialPositionX, PlayerInitialPositionY));
@@ -65,18 +76,49 @@ namespace Final_Project_PBO_AF
                 ForeColor = Color.Black
             };
             this.Controls.Add(_scoreLabel);
+
+            _timerLabel = new Label
+            {
+                Text = "Time: 60",
+                Location = new Point(10, 70),
+                AutoSize = true,
+                Font = new Font("Arial", 16),
+                ForeColor = Color.Black
+            };
+            this.Controls.Add(_timerLabel);
         }
 
-        protected override void OnShown(EventArgs e) //spawn bones and poop after canvas is fully form
+        protected override void OnShown(EventArgs e) //spawn after canvas is fully loaded
         {
             base.OnShown(e);
 
             SpawnRandomBones(3);
             SpawnRandomPoop(2);
+
+            _gameTimer.Start();
         }
 
+        private void UpdateGameTimer(object sender, EventArgs e)
+        {
+            _remainingTime--;
+            _timerLabel.Text = "Time: " + _remainingTime;
 
-        private void SpawnRandomBones(int count)
+            if (_remainingTime <= 0)
+            {
+                EndGame();
+            }
+        }
+
+        private void EndGame() // game end if timer stop
+        {
+            _animationTimer.Stop();
+            _gameTimer.Stop();
+
+            MessageBox.Show($"Game Over! Your final score is: {_score}", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void SpawnRandomBones(int count) // bones doesnt overlapped
         {
             Random rand = new Random();
 
@@ -115,14 +157,13 @@ namespace Final_Project_PBO_AF
             }
         }
 
-
         private void SpawnRandomPoop(int count)
         {
             Random rand = new Random();
 
             for (int i = 0; i < count; i++)
             {
-                int x = rand.Next(50, this.ClientSize.Width - 50); // Hindari spawn terlalu dekat dengan tepi
+                int x = rand.Next(50, this.ClientSize.Width - 50);
                 int y = rand.Next(50, this.ClientSize.Height - 50);
 
                 Poop poop = new Poop(new Point(x, y));
@@ -131,17 +172,41 @@ namespace Final_Project_PBO_AF
             }
         }
 
+        private void SpawnRandomGold(int count)
+        {
+            Random rand = new Random();
+
+            for (int i = 0; i < count; i++)
+            {
+                int x = rand.Next(50, this.ClientSize.Width - 50);
+                int y = rand.Next(50, this.ClientSize.Height - 50);
+
+                Gold gold = new Gold(new Point(x, y));
+                _gold.Add(gold);
+                this.Controls.Add(gold.GetPictureBox());
+            }
+        }
+
         private void CheckCollisions()
         {
+            Random rand = new Random();
+
             foreach (var bone in _bones.ToList())
             {
                 if (_player.GetPictureBox().Bounds.IntersectsWith(bone.GetPictureBox().Bounds))
                 {
-                    // Hapus tulang dari layar dan daftar
                     this.Controls.Remove(bone.GetPictureBox());
                     _bones.Remove(bone);
 
-                    SpawnRandomBones(1);
+                    if (rand.Next(0, 100) < 10) // 5% chance of getting golden bone
+                    {
+                        SpawnRandomGold(1);
+                    }
+                    else
+                    {
+                        SpawnRandomBones(1);
+                    }
+
 
                     foreach (var poop in _poop.ToList())
                     {
@@ -151,8 +216,21 @@ namespace Final_Project_PBO_AF
 
                     SpawnRandomPoop(2);
 
-                    // Tambah skor
                     UpdateScore(10);
+                }
+            }
+
+            foreach (var gold in _gold.ToList())
+            {
+                if (_player.GetPictureBox().Bounds.IntersectsWith(gold.GetPictureBox().Bounds))
+                {
+                    this.Controls.Remove(gold.GetPictureBox());
+                    _gold.Remove(gold);
+
+                    _remainingTime += 5;
+                    _timerLabel.Text = "Time: " + _remainingTime;
+
+                    SpawnRandomBones(1);
                 }
             }
 
@@ -169,12 +247,12 @@ namespace Final_Project_PBO_AF
                 }
             }
         }
+
         private void UpdateScore(int points)
         {
             _score += points;
             _scoreLabel.Text = "Score: " + _score;
         }
-
 
         private void UpdateFrameCount()
         {

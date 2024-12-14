@@ -73,6 +73,16 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] goldenbone {
+            get {
+                object obj = ResourceManager.GetObject("goldenbone", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] poop {
             get {
                 object obj = ResourceManager.GetObject("poop", resourceCulture);
