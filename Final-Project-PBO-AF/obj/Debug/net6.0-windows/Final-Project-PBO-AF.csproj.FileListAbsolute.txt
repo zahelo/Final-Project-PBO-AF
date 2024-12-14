@@ -16,3 +16,21 @@ C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\ref\Final-Project-PBO-AF.dll
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.Resource.resources
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.sourcelink.json
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Final-Project-PBO-AF.exe
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Final-Project-PBO-AF.deps.json
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Final-Project-PBO-AF.runtimeconfig.json
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Final-Project-PBO-AF.dll
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Final-Project-PBO-AF.pdb
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.MainForm.resources
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.Resource.resources
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.csproj.GenerateResource.cache
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.AssemblyInfoInputs.cache
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.AssemblyInfo.cs
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.csproj.CoreCompileInputs.cache
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.sourcelink.json
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.dll
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\refint\Final-Project-PBO-AF.dll
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.pdb
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.genruntimeconfig.cache
+C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\ref\Final-Project-PBO-AF.dll

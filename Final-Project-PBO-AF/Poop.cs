@@ -8,15 +8,15 @@ using System.Windows.Forms;
 
 namespace Final_Project_PBO_AF
 {
-    public class Bone
+    public class Poop
     {
-        private PictureBox _bonePictureBox;
+        private PictureBox _poopPictureBox;
 
-        public Bone(Point position)
+        public Poop(Point position)
         {
-            _bonePictureBox = new PictureBox
+            _poopPictureBox = new PictureBox
             {
-                Size = new Size(42, 28), // Ukuran tulang
+                Size = new Size(30, 30), // Ukuran poop
                 Location = position,
                 BackColor = Color.Transparent,
                 SizeMode = PictureBoxSizeMode.StretchImage
@@ -24,21 +24,21 @@ namespace Final_Project_PBO_AF
 
             try
             {
-                using (MemoryStream ms = new MemoryStream(Resource.bone)) 
+                using (MemoryStream ms = new MemoryStream(Resource.poop))
                 {
-                    _bonePictureBox.Image = Image.FromStream(ms);
+                    _poopPictureBox.Image = Image.FromStream(ms);
                 }
             }
             catch (Exception e)
             {
-                _bonePictureBox.BackColor = Color.White; 
+                _poopPictureBox.BackColor = Color.White;
                 Console.WriteLine("Gagal load image bone: " + e.Message);
             }
 
         }
         public PictureBox GetPictureBox()
         {
-            return _bonePictureBox;
+            return _poopPictureBox;
         }
     }
 }

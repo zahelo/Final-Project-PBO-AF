@@ -73,6 +73,16 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] poop {
+            get {
+                object obj = ResourceManager.GetObject("poop", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] shibainu {
             get {
                 object obj = ResourceManager.GetObject("shibainu", resourceCulture);

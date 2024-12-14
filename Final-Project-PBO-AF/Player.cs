@@ -2,9 +2,9 @@
 {
     public class Player
     {
-        private const int PlayerWidth = 64;
-        private const int PlayerHeight = 48;
-        private const int TotalFrames = 4;
+        private const int PlayerWidth = 120;
+        private const int PlayerHeight = 90;
+        private const int TotalFrames = 3;
         private PictureBox _playerPictureBox;
         private Image _spriteSheet;
         private int _currentFrame;
@@ -25,7 +25,9 @@
             {
                 Size = new Size(PlayerWidth, PlayerHeight),
                 Location = startPosition,
-                BackColor = Color.Transparent
+                BackColor = Color.Transparent,
+                SizeMode = PictureBoxSizeMode.StretchImage
+
             };
 
             UpdateSprite();
@@ -83,7 +85,7 @@
         {
             if (_isMoving)
             {
-                _currentFrame = (_currentFrame + 1) % 4; // Total 4 frame per baris
+                _currentFrame = (_currentFrame + 1) % 3; // Total 3 frame per baris
                 UpdateSprite();
             }
         }
