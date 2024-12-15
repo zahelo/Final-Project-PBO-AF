@@ -97,14 +97,12 @@ namespace Final_Project_PBO_AF
         public void IncreaseSpeedTemporary(int additionalSpeed, int durationInMilliseconds)
         {
             _speed += additionalSpeed; // Tambah kecepatan
-            _playerPictureBox.BackColor = Color.Yellow; // Untuk nambahin visual effect power up  (opsional sih soalnya kek kaku gitu wkkwkkw)
 
             // Timer untuk mengembalikan kecepatan ke normal
             FormsTimer resetSpeedTimer = new FormsTimer { Interval = durationInMilliseconds };
             resetSpeedTimer.Tick += (s, e) =>
             {
                 _speed -= additionalSpeed; // Kembalikan kecepatan normal
-                _playerPictureBox.BackColor = Color.Transparent; // Kembali ke warna normal
                 resetSpeedTimer.Stop();
             };
             resetSpeedTimer.Start();

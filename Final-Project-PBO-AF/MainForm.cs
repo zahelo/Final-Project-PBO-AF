@@ -19,6 +19,7 @@ namespace Final_Project_PBO_AF
         private Label _frameLabel;
         private Label _scoreLabel;
         private Label _timerLabel;
+        private Label _highestScoreLabel;
 
         private long _totalFrameCount;
         private List<Bone> _bones;
@@ -66,6 +67,16 @@ namespace Final_Project_PBO_AF
 
             _player = new Player(new Point(PlayerInitialPositionX, PlayerInitialPositionY));
             this.Controls.Add(_player.GetPictureBox());
+
+            _highestScoreLabel = new Label
+            {
+                Text = "High Score: " + HighScoreForm.GetHighestScore(),
+                Location = new Point(10, 100),
+                AutoSize = true,
+                Font = new Font("Arial", 16),
+                ForeColor = Color.Black
+            };
+            this.Controls.Add(_highestScoreLabel);
 
             _frameLabel = new Label
             {
@@ -119,10 +130,13 @@ namespace Final_Project_PBO_AF
             }
         }
 
-        private void EndGame() // game end if timer stop
+        private void EndGame()  //timers end, add name, show score
         {
             _animationTimer.Stop();
             _gameTimer.Stop();
+
+            var playerName = Microsoft.VisualBasic.Interaction.InputBox("Enter your name:", "Game Over", "Player");
+            HighScoreForm.SaveHighScore(playerName, _score);
 
             MessageBox.Show($"Game Over! Your final score is: {_score}", "Game Over", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
@@ -173,14 +187,50 @@ namespace Final_Project_PBO_AF
 
             for (int i = 0; i < count; i++)
             {
-                int x = rand.Next(50, this.ClientSize.Width - 50);
-                int y = rand.Next(50, this.ClientSize.Height - 50);
+                Point position;
+                bool validPosition;
 
-                Poop poop = new Poop(new Point(x, y));
+                do
+                {
+                    validPosition = true;
+
+                    int x = rand.Next(50, this.ClientSize.Width - 50);
+                    int y = rand.Next(50, this.ClientSize.Height - 50);
+                    position = new Point(x, y);
+
+                    double playerDistance = Math.Sqrt(
+                        Math.Pow(position.X - _player.GetPictureBox().Location.X, 2) +
+                        Math.Pow(position.Y - _player.GetPictureBox().Location.Y, 2)
+                    );
+
+                    if (playerDistance < 100)
+                    {
+                        validPosition = false;
+                        continue;
+                    }
+
+                    foreach (var bone in _bones)
+                    {
+                        double boneDistance = Math.Sqrt(
+                            Math.Pow(position.X - bone.GetPictureBox().Location.X, 2) +
+                            Math.Pow(position.Y - bone.GetPictureBox().Location.Y, 2)
+                        );
+
+                        if (boneDistance < 100)
+                        {
+                            validPosition = false;
+                            break;
+                        }
+                    }
+                }
+                while (!validPosition);
+
+                Poop poop = new Poop(position);
                 _poop.Add(poop);
                 this.Controls.Add(poop.GetPictureBox());
             }
         }
+    
 
         private void SpawnRandomGold(int count)
         {
@@ -197,13 +247,22 @@ namespace Final_Project_PBO_AF
             }
         }
 
+        private Rectangle GetPlayerCollisionBox()
+        {
+            // Shrink the player's collision box by 10 pixels on each side
+            Rectangle bounds = _player.GetPictureBox().Bounds;
+            bounds.Inflate(-10, -10); // Negative values shrink the rectangle
+            return bounds;
+        }
+
         private void CheckCollisions()
         {
             Random rand = new Random();
+            Rectangle playerCollisionBox = GetPlayerCollisionBox(); // Shrunk player's collision box
 
             foreach (var bone in _bones.ToList())
             {
-                if (_player.GetPictureBox().Bounds.IntersectsWith(bone.GetPictureBox().Bounds))
+                if (playerCollisionBox.IntersectsWith(bone.GetPictureBox().Bounds))
                 {
                     _boneSound.Play();
                     this.Controls.Remove(bone.GetPictureBox());
@@ -217,7 +276,6 @@ namespace Final_Project_PBO_AF
                     {
                         SpawnRandomBones(1);
                     }
-
 
                     foreach (var poop in _poop.ToList())
                     {
@@ -233,7 +291,7 @@ namespace Final_Project_PBO_AF
 
             foreach (var gold in _gold.ToList())
             {
-                if (_player.GetPictureBox().Bounds.IntersectsWith(gold.GetPictureBox().Bounds))
+                if (playerCollisionBox.IntersectsWith(gold.GetPictureBox().Bounds))
                 {
                     _GoldSound.Play();
                     this.Controls.Remove(gold.GetPictureBox());
@@ -242,7 +300,7 @@ namespace Final_Project_PBO_AF
                     _remainingTime += 5;
                     _timerLabel.Text = "Time: " + _remainingTime;
 
-                    _player.IncreaseSpeedTemporary(5, 5000); // Tambah kecepatan 5 selama 5 detik
+                    _player.IncreaseSpeedTemporary(5, 5000); // Increase speed by 5 for 5 seconds
 
                     SpawnRandomBones(1);
                 }
@@ -250,7 +308,7 @@ namespace Final_Project_PBO_AF
 
             foreach (var poop in _poop.ToList())
             {
-                if (_player.GetPictureBox().Bounds.IntersectsWith(poop.GetPictureBox().Bounds))
+                if (playerCollisionBox.IntersectsWith(poop.GetPictureBox().Bounds))
                 {
                     _poopSound.Play();
                     this.Controls.Remove(poop.GetPictureBox());

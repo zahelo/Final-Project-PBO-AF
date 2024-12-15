@@ -57,16 +57,31 @@ namespace Final_Project_PBO_AF
             };
             exitButton.Click += (s, e) => this.Close();
 
+            var highScoreButton = new Button
+            {
+                Text = "High Scores",
+                Location = new Point(150, 150),
+                Size = new Size(300, 90)
+            };
+            highScoreButton.Click += (s, e) =>
+            {
+                HighScoreForm highScoreForm = new HighScoreForm();
+                highScoreForm.ShowDialog();
+            };
+
             startGameButton.Location = new Point((this.ClientSize.Width - startGameButton.Width) / 2, 300);
-            exitButton.Location = new Point((this.ClientSize.Width - exitButton.Width) / 2, 400);
+            highScoreButton.Location = new Point((this.ClientSize.Width - highScoreButton.Width) / 2, 400);
+            exitButton.Location = new Point((this.ClientSize.Width - exitButton.Width) / 2, 500);
 
             this.Controls.Add(startGameButton);
+            this.Controls.Add(highScoreButton);
             this.Controls.Add(exitButton);
 
             // set button to stay in the middle of the form
             this.Resize += (s, e) =>
             {
                 startGameButton.Location = new Point((this.ClientSize.Width - startGameButton.Width) / 2, startGameButton.Location.Y);
+                highScoreButton.Location = new Point((this.ClientSize.Width - highScoreButton.Width) / 2, highScoreButton.Location.Y);
                 exitButton.Location = new Point((this.ClientSize.Width - exitButton.Width) / 2, exitButton.Location.Y);
             };
         }
