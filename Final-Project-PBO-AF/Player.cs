@@ -1,4 +1,6 @@
-﻿namespace Final_Project_PBO_AF
+﻿using FormsTimer = System.Windows.Forms.Timer;
+
+namespace Final_Project_PBO_AF
 {
     public class Player
     {
@@ -10,6 +12,7 @@
         private int _currentFrame;
         private int _currentRow;
         private bool _isMoving;
+        private int _speed;
 
         public Player(Point startPosition)
         {
@@ -20,6 +23,7 @@
 
             _currentFrame = 0;
             _currentRow = 0;
+            _speed = 10;
 
             _playerPictureBox = new PictureBox
             {
@@ -37,35 +41,35 @@
 
         public void Walk(Keys key, Size boundary)
         {
-            int speed = 10;
+            //int speed = 10;
             _isMoving = true;
 
             // _currentRow menunjukkan baris yang sesuai pada resource sprite (bisa dilihat pada folder Resource -> shibainu.png)
-            switch (key)
+            switch (key) // Memakai arrow key dan WSAD
             {
-                case Keys.Down: // Baris untuk Down dengan menggunakan panah atau 'S'
+                case Keys.Down: // Baris untuk Down 
                 case Keys.S:
                     _currentRow = 0;
                     if (_playerPictureBox.Bottom < boundary.Height)
-                        _playerPictureBox.Top += speed;
+                        _playerPictureBox.Top += _speed;
                     break;
                 case Keys.Left:
                 case Keys.A:
-                    _currentRow = 1; // Baris untuk Left
+                    _currentRow = 1; // Baris untuk Left 
                     if (_playerPictureBox.Left > 0)
-                        _playerPictureBox.Left -= speed;
+                        _playerPictureBox.Left -= _speed;
                     break;
                 case Keys.Right:
                 case Keys.D:
                     _currentRow = 2; // Baris untuk Right
                     if (_playerPictureBox.Right < boundary.Width)
-                        _playerPictureBox.Left += speed;
+                        _playerPictureBox.Left += _speed;
                     break;
                 case Keys.Up:
                 case Keys.W:
                     _currentRow = 3; // Baris untuk Up
                     if (_playerPictureBox.Top > 0)
-                        _playerPictureBox.Top -= speed;
+                        _playerPictureBox.Top -= _speed;
                     break;
                 default:
                     _isMoving = false;
@@ -88,6 +92,22 @@
                 _currentFrame = (_currentFrame + 1) % 3; // Total 3 frame per baris
                 UpdateSprite();
             }
+        }
+
+        public void IncreaseSpeedTemporary(int additionalSpeed, int durationInMilliseconds)
+        {
+            _speed += additionalSpeed; // Tambah kecepatan
+            _playerPictureBox.BackColor = Color.Yellow; // Untuk nambahin visual effect power up  (opsional sih soalnya kek kaku gitu wkkwkkw)
+
+            // Timer untuk mengembalikan kecepatan ke normal
+            FormsTimer resetSpeedTimer = new FormsTimer { Interval = durationInMilliseconds };
+            resetSpeedTimer.Tick += (s, e) =>
+            {
+                _speed -= additionalSpeed; // Kembalikan kecepatan normal
+                _playerPictureBox.BackColor = Color.Transparent; // Kembali ke warna normal
+                resetSpeedTimer.Stop();
+            };
+            resetSpeedTimer.Start();
         }
 
         private void UpdateSprite()

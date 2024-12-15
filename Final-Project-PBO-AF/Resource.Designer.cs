@@ -63,9 +63,49 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] bgm {
+            get {
+                object obj = ResourceManager.GetObject("bgm", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] bone {
             get {
                 object obj = ResourceManager.GetObject("bone", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] boneSound {
+            get {
+                object obj = ResourceManager.GetObject("boneSound", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] goldBoneSound {
+            get {
+                object obj = ResourceManager.GetObject("goldBoneSound", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -83,9 +123,29 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] grass {
+            get {
+                object obj = ResourceManager.GetObject("grass", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] poop {
             get {
                 object obj = ResourceManager.GetObject("poop", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] poopSound {
+            get {
+                object obj = ResourceManager.GetObject("poopSound", resourceCulture);
                 return ((byte[])(obj));
             }
         }

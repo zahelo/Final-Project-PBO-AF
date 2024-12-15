@@ -130,4 +130,22 @@
   <data name="goldenbone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\goldenbone.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\background.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="boneSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\boneSound.wav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="goldBoneSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\goldBoneSound.wav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="poopSound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\poopSound.wav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bgm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bgm.wav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\grass.jpg;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

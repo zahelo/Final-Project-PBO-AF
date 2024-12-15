@@ -1,4 +1,5 @@
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
@@ -25,11 +26,18 @@ namespace Final_Project_PBO_AF
         private List<Poop> _poop;
         private int _score;
         private int _remainingTime;
+        private SoundPlayer _GoldSound;
+        private SoundPlayer _poopSound;
+        private SoundPlayer _boneSound;
 
         public MainForm()
         {
             InitializeLevel();
             this.DoubleBuffered = true;
+
+            _boneSound = new SoundPlayer(new MemoryStream(Resource.boneSound));
+            _GoldSound = new SoundPlayer(new MemoryStream(Resource.goldBoneSound));
+            _poopSound = new SoundPlayer(new MemoryStream(Resource.poopSound));
         }
 
         private void InitializeLevel()
@@ -37,6 +45,8 @@ namespace Final_Project_PBO_AF
             this.Text = "Bone Hunt";
             this.FormBorderStyle = FormBorderStyle.Sizable; // Start in maximized
             this.WindowState = FormWindowState.Maximized;
+            this.BackgroundImage = Image.FromStream(new MemoryStream(Resource.grass)); 
+
             this.BackColor = Color.LightGray;
             this.KeyDown += OnKeyDown;
             this.KeyUp += OnKeyUp;
@@ -195,6 +205,7 @@ namespace Final_Project_PBO_AF
             {
                 if (_player.GetPictureBox().Bounds.IntersectsWith(bone.GetPictureBox().Bounds))
                 {
+                    _boneSound.Play();
                     this.Controls.Remove(bone.GetPictureBox());
                     _bones.Remove(bone);
 
@@ -224,11 +235,14 @@ namespace Final_Project_PBO_AF
             {
                 if (_player.GetPictureBox().Bounds.IntersectsWith(gold.GetPictureBox().Bounds))
                 {
+                    _GoldSound.Play();
                     this.Controls.Remove(gold.GetPictureBox());
                     _gold.Remove(gold);
 
                     _remainingTime += 5;
                     _timerLabel.Text = "Time: " + _remainingTime;
+
+                    _player.IncreaseSpeedTemporary(5, 5000); // Tambah kecepatan 5 selama 5 detik
 
                     SpawnRandomBones(1);
                 }
@@ -238,6 +252,7 @@ namespace Final_Project_PBO_AF
             {
                 if (_player.GetPictureBox().Bounds.IntersectsWith(poop.GetPictureBox().Bounds))
                 {
+                    _poopSound.Play();
                     this.Controls.Remove(poop.GetPictureBox());
                     _poop.Remove(poop);
 
