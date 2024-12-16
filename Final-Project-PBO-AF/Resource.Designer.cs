@@ -73,6 +73,16 @@ namespace Final_Project_PBO_AF {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] bgm {
+            get {
+                object obj = ResourceManager.GetObject("bgm", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] bone {
             get {
                 object obj = ResourceManager.GetObject("bone", resourceCulture);
@@ -87,6 +97,15 @@ namespace Final_Project_PBO_AF {
             get {
                 object obj = ResourceManager.GetObject("boneSound", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to �pDSIG&lt;`GDEFa&lt;hGPOSj��/&lt;�+�GSUBl�t�h OS/2J��x`cmapY=(\|gasp��&lt;XglyfR���`1�head(��F�6hhea�4$hmtx�i���locaj	$��maxpt�X nameF�t�7�Npost(�c�;Lx��_&lt;��S��S�:���	b	b��6	�aa����3�3�fHL  �&quot;	b��6	bU�� d��V�c�_ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string CuteDog_d94AK {
+            get {
+                return ResourceManager.GetString("CuteDog-d94AK", resourceCulture);
             }
         }
         

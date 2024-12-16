@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,78 @@ namespace Final_Project_PBO_AF
 {
     public partial class MenuForm : Form
     {
+        private Label _gameTitleLabel;
         public MenuForm()
         {
             InitializeForm();
+            AddGameTitle();
             InitializeControls();
         }
+
+        //private void AddGameTitle()
+        //{
+
+        //    _gameTitleLabel = new Label
+        //    {
+        //        Text = "BONE HUNT", // Judul Game
+        //        Font = LoadCustomFont("Resources/Fonts/CuteDog-d94AK.ttf", 100, FontStyle.Regular), // Load font dari file
+        //        ForeColor = Color.FromArgb(239, 196, 130), // Warna teks
+        //        BackColor = Color.Transparent,
+        //        AutoSize = true,
+        //        TextAlign = ContentAlignment.MiddleCenter
+        //    };
+
+        //    int titleY = this.ClientSize.Height / 6;
+        //    _gameTitleLabel.Location = new Point((this.ClientSize.Width - _gameTitleLabel.Width) / 2, titleY);
+
+        //    this.Controls.Add(_gameTitleLabel);
+
+        //    // Responsif saat form di-resize
+        //    this.Resize += (s, e) =>
+        //    {
+        //        titleY = this.ClientSize.Height / 6;
+        //        _gameTitleLabel.Location = new Point((this.ClientSize.Width - _gameTitleLabel.Width) / 2, titleY);
+        //    };
+        //}
+
+        private void AddGameTitle()
+        {
+            var gameTitle = new OutlinedLabel
+            {
+                DisplayText = "BONE HUNT",
+                DisplayFont = LoadCustomFont("Resources/Fonts/CuteDog-d94AK.ttf", 100, FontStyle.Regular),
+                OutlineColor = Color.Black, // Warna outline
+                TextColor = ColorTranslator.FromHtml("#EFC482"), // Warna teks Shiba Inu
+                OutlineWidth = 4, // Ketebalan outline
+                AutoSize = false,
+                Size = new Size(800, 120),
+                Location = new Point((this.ClientSize.Width - 800) / 2, this.ClientSize.Height / 6),
+                BackColor = Color.Transparent // Mengaktifkan transparansi
+            };
+
+            this.Controls.Add(gameTitle);
+
+            this.Resize += (s, e) =>
+            {
+                gameTitle.Location = new Point((this.ClientSize.Width - 800) / 2, this.ClientSize.Height / 6);
+            };
+        }
+
+
+        private Font LoadCustomFont(string fontFilePath, float size, FontStyle style)
+        {
+            PrivateFontCollection pfc = new PrivateFontCollection();
+
+            string fullPath = Path.Combine(Application.StartupPath, "Resources", "Fonts", "CuteDog-d94AK.ttf");
+            if (!File.Exists(fullPath))
+            {
+                throw new FileNotFoundException("Font file not found", fullPath);
+            }
+
+            pfc.AddFontFile(fullPath);
+            return new Font(pfc.Families[0], size, style);
+        }
+
 
         private void InitializeForm()
         {
@@ -69,6 +137,10 @@ namespace Final_Project_PBO_AF
                 highScoreForm.ShowDialog();
             };
 
+            int formCenterX = (this.ClientSize.Width - startGameButton.Width) / 2;
+            int verticalOffset = this.ClientSize.Height / 2; // Pusat layar untuk menu
+            int spacing = 20; // Jarak antar tombol
+
             startGameButton.Location = new Point((this.ClientSize.Width - startGameButton.Width) / 2, 300);
             highScoreButton.Location = new Point((this.ClientSize.Width - highScoreButton.Width) / 2, 400);
             exitButton.Location = new Point((this.ClientSize.Width - exitButton.Width) / 2, 500);
@@ -80,9 +152,12 @@ namespace Final_Project_PBO_AF
             // set button to stay in the middle of the form
             this.Resize += (s, e) =>
             {
-                startGameButton.Location = new Point((this.ClientSize.Width - startGameButton.Width) / 2, startGameButton.Location.Y);
-                highScoreButton.Location = new Point((this.ClientSize.Width - highScoreButton.Width) / 2, highScoreButton.Location.Y);
-                exitButton.Location = new Point((this.ClientSize.Width - exitButton.Width) / 2, exitButton.Location.Y);
+                formCenterX = (this.ClientSize.Width - startGameButton.Width) / 2;
+                verticalOffset = this.ClientSize.Height / 2;
+
+                startGameButton.Location = new Point(formCenterX, verticalOffset);
+                highScoreButton.Location = new Point(formCenterX, startGameButton.Bottom + spacing);
+                exitButton.Location = new Point(formCenterX, highScoreButton.Bottom + spacing);
             };
         }
         private void StartGameButton_Click(object sender, EventArgs e)
@@ -98,11 +173,11 @@ namespace Final_Project_PBO_AF
         {
             if (keyData == Keys.Escape)
             {
-                this.WindowState = FormWindowState.Normal; // Kembali ke ukuran normal
-        this.FormBorderStyle = FormBorderStyle.Sizable; // Tampilkan kembali border
-        this.StartPosition = FormStartPosition.CenterScreen; // Pusatkan form
-        this.Size = new Size(800, 600); // Atur ukuran default
-        return true; // Beri tahu sistem bahwa tombol sudah ditangani
+                this.WindowState = FormWindowState.Normal; 
+        this.FormBorderStyle = FormBorderStyle.Sizable; 
+        this.StartPosition = FormStartPosition.CenterScreen; 
+        this.Size = new Size(800, 600); 
+        return true; 
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }

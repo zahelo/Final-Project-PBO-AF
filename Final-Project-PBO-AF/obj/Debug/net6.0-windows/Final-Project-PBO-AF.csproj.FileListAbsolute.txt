@@ -36,3 +36,4 @@ C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\
 C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\ref\Final-Project-PBO-AF.dll
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.MenuForm.resources
 C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.MenuForm.resources
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Resources\Fonts\CuteDog-d94AK.ttf

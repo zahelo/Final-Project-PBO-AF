@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj": {}
+    "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj": {}
   },
   "projects": {
-    "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj": {
+    "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",
+        "projectUniqueName": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",
         "projectName": "Final-Project-PBO-AF",
-        "projectPath": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",
-        "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Uni Stuff\\Semester 5\\PBO\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\obj\\",
+        "projectPath": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj",
+        "packagesPath": "C:\\Users\\AZIZAH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AZIZAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

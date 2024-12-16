@@ -124,11 +124,11 @@
   <data name="bone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\bone.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="poop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\poop.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="goldenbone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\goldenbone.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="poop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\poop.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\background.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -144,5 +144,11 @@
   </data>
   <data name="grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\grassland.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="bgm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bgm.wav;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CuteDog-d94AK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CuteDog-d94AK.ttf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
 </root>

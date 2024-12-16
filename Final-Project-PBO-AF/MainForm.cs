@@ -1,5 +1,7 @@
 using System.Drawing;
+using System.Drawing.Text;
 using System.Media;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
@@ -39,6 +41,7 @@ namespace Final_Project_PBO_AF
             _boneSound = new SoundPlayer(new MemoryStream(Resource.boneSound));
             _GoldSound = new SoundPlayer(new MemoryStream(Resource.goldBoneSound));
             _poopSound = new SoundPlayer(new MemoryStream(Resource.poopSound));
+
         }
 
         private void InitializeLevel()
@@ -300,7 +303,7 @@ namespace Final_Project_PBO_AF
                     _remainingTime += 5;
                     _timerLabel.Text = "Time: " + _remainingTime;
 
-                    _player.IncreaseSpeedTemporary(5, 5000); // Increase speed by 5 for 5 seconds
+                    _player.IncreaseSpeedTemporary(5, 15000); // Increase speed by 5 for 15 seconds
 
                     SpawnRandomBones(1);
                 }
