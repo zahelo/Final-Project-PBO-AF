@@ -29,19 +29,14 @@ namespace Final_Project_PBO_AF
         private List<Poop> _poop;
         private int _score;
         private int _remainingTime;
-        private SoundPlayer _GoldSound;
-        private SoundPlayer _poopSound;
-        private SoundPlayer _boneSound;
+        private SoundPlayer _bgmSound;
 
         public MainForm()
         {
             InitializeLevel();
             this.DoubleBuffered = true;
-
-            _boneSound = new SoundPlayer(new MemoryStream(Resource.boneSound));
-            _GoldSound = new SoundPlayer(new MemoryStream(Resource.goldBoneSound));
-            _poopSound = new SoundPlayer(new MemoryStream(Resource.poopSound));
-
+            //_bgmSound = new SoundPlayer(new MemoryStream(Resource.bgm));
+            //_bgmSound.PlayLooping();
         }
 
         private void InitializeLevel()
@@ -76,38 +71,41 @@ namespace Final_Project_PBO_AF
                 Text = "High Score: " + HighScoreForm.GetHighestScore(),
                 Location = new Point(10, 100),
                 AutoSize = true,
-                Font = new Font("Arial", 16),
-                ForeColor = Color.Black
+                Font = new Font("Arial", 30),
+                ForeColor = Color.SaddleBrown,
+                BackColor = Color.Transparent
             };
             this.Controls.Add(_highestScoreLabel);
 
-            _frameLabel = new Label
-            {
-                Text = "Total frames: ",
-                Location = new Point(10, 10),
-                AutoSize = true,
-                Font = new Font("Arial", 16),
-                ForeColor = Color.Black
-            };
-            this.Controls.Add(_frameLabel);
+            //_frameLabel = new Label
+            //{
+            //    Text = "Total frames: ",
+            //    Location = new Point(10, 10),
+            //    AutoSize = true,
+            //    Font = new Font("Arial", 16),
+            //    ForeColor = Color.SaddleBrown
+            //};
+            //this.Controls.Add(_frameLabel);
 
             _scoreLabel = new Label
             {
                 Text = "Score: 0",
                 Location = new Point(10, 40),
                 AutoSize = true,
-                Font = new Font("Arial", 16),
-                ForeColor = Color.Black
+                Font = new Font("Arial", 30),
+                ForeColor = Color.SaddleBrown,
+                BackColor = Color.Transparent
             };
             this.Controls.Add(_scoreLabel);
 
             _timerLabel = new Label
             {
                 Text = "Time: 60",
-                Location = new Point(10, 70),
+                Location = new Point(10, 160),
                 AutoSize = true,
-                Font = new Font("Arial", 16),
-                ForeColor = Color.Black
+                Font = new Font("Arial", 30),
+                ForeColor = Color.SaddleBrown,
+                BackColor = Color.Transparent
             };
             this.Controls.Add(_timerLabel);
         }
@@ -267,9 +265,9 @@ namespace Final_Project_PBO_AF
             {
                 if (playerCollisionBox.IntersectsWith(bone.GetPictureBox().Bounds))
                 {
-                    _boneSound.Play();
                     this.Controls.Remove(bone.GetPictureBox());
                     _bones.Remove(bone);
+                    PlayBoneEffectSound(new MemoryStream(Resource.boneSound));
 
                     if (rand.Next(0, 100) < 10) // 5% chance of getting golden bone
                     {
@@ -296,9 +294,9 @@ namespace Final_Project_PBO_AF
             {
                 if (playerCollisionBox.IntersectsWith(gold.GetPictureBox().Bounds))
                 {
-                    _GoldSound.Play();
                     this.Controls.Remove(gold.GetPictureBox());
                     _gold.Remove(gold);
+                    PlayGoldEffectSound(new MemoryStream(Resource.boneSound));
 
                     _remainingTime += 5;
                     _timerLabel.Text = "Time: " + _remainingTime;
@@ -313,9 +311,9 @@ namespace Final_Project_PBO_AF
             {
                 if (playerCollisionBox.IntersectsWith(poop.GetPictureBox().Bounds))
                 {
-                    _poopSound.Play();
                     this.Controls.Remove(poop.GetPictureBox());
                     _poop.Remove(poop);
+                    PlayBoneEffectSound(new MemoryStream(Resource.boneSound));
 
                     SpawnRandomPoop(1);
 
@@ -323,18 +321,46 @@ namespace Final_Project_PBO_AF
                 }
             }
         }
+        private void PlayBackgroundMusic()
+        {
+            _bgmSound = new SoundPlayer(new MemoryStream(Resource.bgm));
 
+        }
+
+        private void PlayBoneEffectSound(Stream soundStream)
+        {
+            using (SoundPlayer effectPlayer = new SoundPlayer(soundStream))
+            {
+                effectPlayer.Play();
+            }
+        }
+
+        private void PlayGoldEffectSound(Stream soundStream)
+        {
+            using (SoundPlayer effectPlayer = new SoundPlayer(soundStream))
+            {
+                effectPlayer.Play();
+            }
+        }
+
+        private void PlayPoopEffectSound(Stream soundStream)
+        {
+            using (SoundPlayer effectPlayer = new SoundPlayer(soundStream))
+            {
+                effectPlayer.Play();
+            }
+        }
         private void UpdateScore(int points)
         {
             _score += points;
             _scoreLabel.Text = "Score: " + _score;
         }
 
-        private void UpdateFrameCount()
-        {
-            _totalFrameCount++;
-            _frameLabel.Text = "Total frames: " + _totalFrameCount;
-        }
+        //private void UpdateFrameCount()
+        //{
+        //    _totalFrameCount++;
+        //    _frameLabel.Text = "Total frames: " + _totalFrameCount;
+        //}
 
         private void OnKeyDown(object sender, KeyEventArgs e)
         {
@@ -348,7 +374,7 @@ namespace Final_Project_PBO_AF
 
         private void Render()
         {
-            UpdateFrameCount();
+            //UpdateFrameCount();
             _player.Animate();
             CheckCollisions();
         }

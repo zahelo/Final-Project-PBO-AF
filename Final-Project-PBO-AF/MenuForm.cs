@@ -21,39 +21,13 @@ namespace Final_Project_PBO_AF
             InitializeControls();
         }
 
-        //private void AddGameTitle()
-        //{
-
-        //    _gameTitleLabel = new Label
-        //    {
-        //        Text = "BONE HUNT", // Judul Game
-        //        Font = LoadCustomFont("Resources/Fonts/CuteDog-d94AK.ttf", 100, FontStyle.Regular), // Load font dari file
-        //        ForeColor = Color.FromArgb(239, 196, 130), // Warna teks
-        //        BackColor = Color.Transparent,
-        //        AutoSize = true,
-        //        TextAlign = ContentAlignment.MiddleCenter
-        //    };
-
-        //    int titleY = this.ClientSize.Height / 6;
-        //    _gameTitleLabel.Location = new Point((this.ClientSize.Width - _gameTitleLabel.Width) / 2, titleY);
-
-        //    this.Controls.Add(_gameTitleLabel);
-
-        //    // Responsif saat form di-resize
-        //    this.Resize += (s, e) =>
-        //    {
-        //        titleY = this.ClientSize.Height / 6;
-        //        _gameTitleLabel.Location = new Point((this.ClientSize.Width - _gameTitleLabel.Width) / 2, titleY);
-        //    };
-        //}
-
         private void AddGameTitle()
         {
             var gameTitle = new OutlinedLabel
             {
                 DisplayText = "BONE HUNT",
                 DisplayFont = LoadCustomFont("Resources/Fonts/CuteDog-d94AK.ttf", 100, FontStyle.Regular),
-                OutlineColor = Color.Black, // Warna outline
+                OutlineColor = Color.SaddleBrown, // Warna outline
                 TextColor = ColorTranslator.FromHtml("#EFC482"), // Warna teks Shiba Inu
                 OutlineWidth = 4, // Ketebalan outline
                 AutoSize = false,
@@ -66,12 +40,11 @@ namespace Final_Project_PBO_AF
 
             this.Resize += (s, e) =>
             {
-                gameTitle.Location = new Point((this.ClientSize.Width - 800) / 2, this.ClientSize.Height / 6);
+                gameTitle.Location = new Point((this.ClientSize.Width - 1500) / 2, this.ClientSize.Height / 6);
             };
         }
 
-
-        private Font LoadCustomFont(string fontFilePath, float size, FontStyle style)
+            private Font LoadCustomFont(string fontFilePath, float size, FontStyle style)
         {
             PrivateFontCollection pfc = new PrivateFontCollection();
 
