@@ -4,6 +4,7 @@ using System.Media;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using NAudio.Wave;
 
 namespace Final_Project_PBO_AF
 {
@@ -13,6 +14,9 @@ namespace Final_Project_PBO_AF
         private const int PlayerInitialPositionY = 450;
         private const int AnimationInterval = 100;
         private const int GameDuration = 60;
+        private IWavePlayer _bgmPlayer;         // Player untuk BGM
+        private AudioFileReader _bgmFile;       // File reader untuk BGM
+
 
         private System.Windows.Forms.Timer _animationTimer;
         private System.Windows.Forms.Timer _gameTimer;
@@ -31,10 +35,12 @@ namespace Final_Project_PBO_AF
         private int _remainingTime;
         private SoundPlayer _bgmSound;
 
-        public MainForm()
+        public MainForm(IWavePlayer bgmPlayer)
         {
             InitializeLevel();
             this.DoubleBuffered = true;
+            //PlayBackgroundMusic();
+            _bgmPlayer = bgmPlayer;
             //_bgmSound = new SoundPlayer(new MemoryStream(Resource.bgm));
             //_bgmSound.PlayLooping();
         }
@@ -323,8 +329,23 @@ namespace Final_Project_PBO_AF
         }
         private void PlayBackgroundMusic()
         {
-            _bgmSound = new SoundPlayer(new MemoryStream(Resource.bgm));
-
+            try
+            {
+                // Path ke file BGM
+                string bgmPath = Path.Combine(Application.StartupPath, "Resources", "bgm.wav");
+                _bgmFile = new AudioFileReader(bgmPath);  
+                _bgmPlayer = new WaveOutEvent();          
+                _bgmPlayer.Init(_bgmFile);                
+                _bgmPlayer.Play();                       
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saat memutar BGM: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
         }
 
         private void PlayBoneEffectSound(Stream soundStream)

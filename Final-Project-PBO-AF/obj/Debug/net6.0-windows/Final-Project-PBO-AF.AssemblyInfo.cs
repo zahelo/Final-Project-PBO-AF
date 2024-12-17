@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Final-Project-PBO-AF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+460cae1b58caebc2187c743cfafaf8fb72e8b434")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d59c9c5cd0348329ef46e3529c0e92eaef9e5daf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Final-Project-PBO-AF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Final-Project-PBO-AF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

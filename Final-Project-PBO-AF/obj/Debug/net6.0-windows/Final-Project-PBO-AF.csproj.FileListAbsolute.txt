@@ -37,3 +37,13 @@ C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.MenuForm.resources
 C:\Uni Stuff\Semester 5\PBO\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final_Project_PBO_AF.MenuForm.resources
 C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Resources\Fonts\CuteDog-d94AK.ttf
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.Asio.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.Core.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.Midi.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.Wasapi.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.WinForms.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\NAudio.WinMM.dll
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Project-PBO-AF.csproj.AssemblyReference.cache
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\obj\Debug\net6.0-windows\Final-Pr.80AE97ED.Up2Date
+C:\Users\AZIZAH\Perkuliahan\Semester 5\Pemrograman Berbasis Objek\Final-Project-PBO-AF\Final-Project-PBO-AF\bin\Debug\net6.0-windows\Resources\bgm.wav

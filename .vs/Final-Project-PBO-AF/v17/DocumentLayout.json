@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\outlinedlabel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|c:\\users\\azizah\\perkuliahan\\semester 5\\pemrograman berbasis objek\\final-project-pbo-af\\final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B52DD55-53A5-40EC-B8F9-461686701B8C}|Final-Project-PBO-AF\\Final-Project-PBO-AF.csproj|solutionrelative:final-project-pbo-af\\poop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 899,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "OutlinedLabel.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\OutlinedLabel.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\OutlinedLabel.cs",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "HighScoreForm.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\HighScoreForm.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\HighScoreForm.cs",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Bone.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Bone.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Bone.cs",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Player.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Player.cs",
@@ -122,20 +122,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MainForm.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\MainForm.cs",
               "ToolTip": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MainForm.cs",
               "RelativeToolTip": "Final-Project-PBO-AF\\MainForm.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAArwIcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAowE0BAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:58:55.084Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Program.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Program.cs",
@@ -143,24 +143,25 @@
               "RelativeToolTip": "Final-Project-PBO-AF\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAkwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:01:08.527Z"
+              "WhenOpened": "2024-12-12T03:01:08.527Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MenuForm.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MenuForm.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\MenuForm.cs",
               "ToolTip": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MenuForm.cs",
               "RelativeToolTip": "Final-Project-PBO-AF\\MenuForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAowJsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T03:17:08.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Gold.cs",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\Gold.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\Gold.cs",
@@ -172,15 +173,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MenuForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MenuForm.cs",
               "RelativeDocumentMoniker": "Final-Project-PBO-AF\\MenuForm.cs",
               "ToolTip": "C:\\Users\\AZIZAH\\Perkuliahan\\Semester 5\\Pemrograman Berbasis Objek\\Final-Project-PBO-AF\\Final-Project-PBO-AF\\MenuForm.cs [Design]",
               "RelativeToolTip": "Final-Project-PBO-AF\\MenuForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T23:47:46.865Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-15T23:47:46.865Z"
             }
           ]
         },

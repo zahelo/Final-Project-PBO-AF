@@ -8,17 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 namespace Final_Project_PBO_AF
 {
     public partial class MenuForm : Form
     {
+        private IWavePlayer _bgmPlayer;
+        private AudioFileReader _bgmFile;
         private Label _gameTitleLabel;
         public MenuForm()
         {
             InitializeForm();
             AddGameTitle();
             InitializeControls();
+            PlayBackgroundMusic();
+
+            Application.ApplicationExit += OnApplicationExit;
         }
 
         private void AddGameTitle()
@@ -57,8 +63,21 @@ namespace Final_Project_PBO_AF
             pfc.AddFontFile(fullPath);
             return new Font(pfc.Families[0], size, style);
         }
-
-
+        private void PlayBackgroundMusic()
+        {
+            try
+            {
+                string bgmPath = Path.Combine(Application.StartupPath, "Resources", "bgm.wav");
+                _bgmFile = new AudioFileReader(bgmPath);
+                _bgmPlayer = new WaveOutEvent();
+                _bgmPlayer.Init(_bgmFile);
+                _bgmPlayer.Play();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saat memutar BGM: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void InitializeForm()
         {
             this.Text = "Game Menu";
@@ -136,12 +155,24 @@ namespace Final_Project_PBO_AF
         private void StartGameButton_Click(object sender, EventArgs e)
         {
             // after click game start, it will navigate to main form 
-            MainForm gameForm = new MainForm();
+            MainForm gameForm = new MainForm(_bgmPlayer);
             gameForm.FormClosed += (s, args) => this.Show(); // show menu form if main form closed
             gameForm.Show();
             this.Hide();
         }
 
+        private void OnApplicationExit(object sender, EventArgs e)
+        {
+            // Hentikan musik dan bersihkan resource saat aplikasi ditutup
+            _bgmPlayer?.Stop();
+            _bgmPlayer?.Dispose();
+            _bgmFile?.Dispose();
+        }
+        protected override void OnClosed(EventArgs e)
+        {
+            // Hentikan musik dan bersihkan resource saat MenuForm ditutup
+            base.OnClosed(e);
+        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
